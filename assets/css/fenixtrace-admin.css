@@ -1,0 +1,11 @@
+.fenixtrace-metabox { padding: 4px 0; }
+.fenixtrace-metabox p { margin: 6px 0; font-size: 13px; }
+.fenixtrace-hash { font-size: 11px; word-break: break-all; display: block; padding: 4px 6px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 4px; margin-top: 2px; }
+.fenixtrace-error { color: #dc2626; background: #fef2f2; padding: 8px; border-radius: 4px; border: 1px solid #fecaca; }
+.fenixtrace-sync-btn { margin-top: 8px !important; width: 100%; }
+
+.fenixtrace-badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.fenixtrace-badge-draft { background: #f3f4f6; color: #6b7280; }
+.fenixtrace-badge-queued { background: #fef3c7; color: #92400e; }
+.fenixtrace-badge-synced { background: #d1fae5; color: #065f46; }
+.fenixtrace-badge-error { background: #fee2e2; color: #991b1b; }
