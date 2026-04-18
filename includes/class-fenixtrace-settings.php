@@ -19,9 +19,25 @@ class FenixTrace_Settings {
         );
     }
 
+    /**
+     * Force the Integration Kit URL to use the http / https scheme.
+     * esc_url_raw accepts schemes like javascript:, tel:, ftp:, etc.
+     */
+    public static function sanitize_kit_url( $value ) {
+        $raw = esc_url_raw( (string) $value, array( 'http', 'https' ) );
+        if ( empty( $raw ) ) {
+            return 'http://localhost:3005';
+        }
+        $parts = wp_parse_url( $raw );
+        if ( empty( $parts['host'] ) ) {
+            return 'http://localhost:3005';
+        }
+        return $raw;
+    }
+
     public static function register_settings() {
         register_setting( 'fenixtrace_settings', 'fenixtrace_kit_url', array(
-            'sanitize_callback' => 'esc_url_raw',
+            'sanitize_callback' => array( __CLASS__, 'sanitize_kit_url' ),
             'default'           => 'http://localhost:3005',
         ) );
         register_setting( 'fenixtrace_settings', 'fenixtrace_upload_dir', array(

@@ -190,12 +190,15 @@ class FenixTrace_Product {
     }
 
     /**
-     * Generate unique filename for the JSON payload.
+     * Generate unique filename for the JSON payload. sanitize_title() is a
+     * decent first pass but does not guarantee path-safety, so we also
+     * strip anything that is not [A-Za-z0-9._-] before joining the parts.
      */
     public static function generate_filename( $product ): string {
         $slug = sanitize_title( $product->get_sku() ?: $product->get_name() );
+        $slug = preg_replace( '/[^A-Za-z0-9._-]/', '', (string) $slug );
         if ( empty( $slug ) ) $slug = 'product-' . $product->get_id();
-        return $slug . '_' . $product->get_id() . '_' . gmdate( 'YmdHis' ) . '.json';
+        return $slug . '_' . (int) $product->get_id() . '_' . gmdate( 'YmdHis' ) . '.json';
     }
 
     /**
@@ -226,6 +229,15 @@ class FenixTrace_Product {
         if ( $action !== 'fenixtrace_sync' ) {
             return $redirect_to;
         }
+
+        if ( ! current_user_can( 'edit_products' ) ) {
+            return add_query_arg( 'fenixtrace_error', 'permission', $redirect_to );
+        }
+
+        // WooCommerce bulk actions go through the standard WP edit screen,
+        // which stamps a _wpnonce bound to "bulk-posts". Reject submissions
+        // that arrive without a valid nonce (e.g. forged cross-site requests).
+        check_admin_referer( 'bulk-posts' );
 
         $success = 0;
         $errors  = 0;
