@@ -44,9 +44,17 @@ Products list → select products → **Bulk Actions** → **"Send to FenixTrace
 ### Auto-Sync
 Enable in settings — products are automatically synced when published.
 
+## Other Plugins
+
+| Plugin | Platform | Repository |
+|---|---|---|
+| **FenixTrace for Odoo** | Odoo 16/17 | [GitHub](https://github.com/SantoBaldassarre/FenixTrace-IOTA-Plugin-Odoo) |
+| **FenixTrace for PrestaShop** | PrestaShop 1.7/8.x | [GitHub](https://github.com/SantoBaldassarre/FenixTrace-IOTA-Plugin-PrestaShop) |
+
 ## Links
 
-- [FenixTrace Platform](https://trace.fenixsoftwarelabs.com)
+- [FenixTrace Platform](https://fenixtrace.com)
+- [FenixTrace Integration Docs](https://fenixtrace.com/docs/integration-gateway)
 - [Integration Kit](https://github.com/SantoBaldassarre/FenixTrace-IOTA-auto-add-product-Integration-Kit)
 - [Fenix Software Labs](https://www.fenixsoftwarelabs.com)
 

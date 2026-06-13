@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: FenixTrace for WooCommerce
- * Plugin URI:  https://trace.fenixsoftwarelabs.com
+ * Plugin URI:  https://fenixtrace.com
  * Description: Register WooCommerce products on the IOTA L1 blockchain via the FenixTrace Integration Kit.
  * Version:     1.0.0
  * Author:      Fenix Software Labs
