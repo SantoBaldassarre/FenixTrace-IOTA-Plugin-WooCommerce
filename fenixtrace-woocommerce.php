@@ -2,7 +2,7 @@
 /**
  * Plugin Name: FenixTrace for WooCommerce
  * Plugin URI:  https://fenixtrace.com
- * Description: Register WooCommerce products on the IOTA L1 blockchain via the FenixTrace Integration Kit.
+ * Description: Send WooCommerce product data to FenixTrace for traceability and EU-compliance readiness (EUDR, Digital Product Passport). FenixTrace handles notarization, tamper-proof evidence and compliance automatically, server-side.
  * Version:     1.0.0
  * Author:      Fenix Software Labs
  * Author URI:  https://www.fenixsoftwarelabs.com

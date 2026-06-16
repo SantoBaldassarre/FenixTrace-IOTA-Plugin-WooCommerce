@@ -1,14 +1,16 @@
 # FenixTrace for WooCommerce
 
-WordPress/WooCommerce plugin that registers products on the **IOTA L1** blockchain via the FenixTrace Integration Kit.
+WordPress/WooCommerce plugin that sends your product data to FenixTrace for product traceability and EU-compliance readiness (EUDR, Digital Product Passport). FenixTrace handles notarization, tamper-proof evidence and compliance automatically, server-side — so you get origin proof and anti-counterfeiting protection without leaving WooCommerce.
 
 > Built by [Fenix Software Labs](https://www.fenixsoftwarelabs.com)
 
 ## How It Works
 
 ```
-WooCommerce Product → JSON → Integration Kit → IPFS + IOTA L1 → FenixTrace Scanner
+WooCommerce Product → JSON → Integration Kit → FenixTrace → FenixTrace Scanner
 ```
+
+The plugin's only job is to send product data to FenixTrace. Notarization, evidence storage and compliance are handled automatically on the server side — records are notarized and tamper-proof, so origin and authenticity can be verified by scanning.
 
 ## Requirements
 
